@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     id("com.github.ben-manes.versions") version "0.53.0"
     application
 }
@@ -21,8 +20,10 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-
-
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
 }
