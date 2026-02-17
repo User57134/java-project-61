@@ -9,11 +9,12 @@ public class Cli {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
 
-        String user_name = "";
-        if (scanner.hasNext())
-          user_name = scanner.next();
+        String user = "";
+        if (scanner.hasNext()) {
+            user = scanner.next();
+        }
 
-        System.out.println("Hello, " + user_name + "!");
+        System.out.println("Hello, " + user + "!");
 
         scanner.close();
     }
