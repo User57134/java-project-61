@@ -29,6 +29,11 @@ repositories {
 }
 
 
+dependencies {
+    implementation("org.apache.commons:commons-lang3:3.20.0")
+}
+
+
 application {
     mainClass.set("hexlet.code.App")
 }

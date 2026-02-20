@@ -6,6 +6,9 @@ build/
 !**/src/test/**/build/
 .kotlin
 
+### Custom ###
+*.cast
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
