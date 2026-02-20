@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public final class EvenGame {
-    public static final int defaultRandomRangeMax = 100;
-    public static final int defaultTriesNumber = 3;
+    public static final int DEFAULT_RANDOM_MAX = 100;
+    public static final int DEFAULT_TRIES_NUMBER = 3;
     private static Random generator = null;
 
     private EvenGame() {
@@ -30,8 +30,8 @@ public final class EvenGame {
             generator = new Random();
         }
 
-        for (int i = 1; i <= defaultTriesNumber; i += 1) {
-            int number = generator.nextInt(defaultRandomRangeMax); // Random from 0 to defaultRandomRangeMax
+        for (int i = 1; i <= DEFAULT_TRIES_NUMBER; i += 1) {
+            int number = generator.nextInt(DEFAULT_RANDOM_MAX); // Random from 0 to defaultRandomRangeMax
             System.out.println("Question: " + number);
 
             String answer = reader.next();
