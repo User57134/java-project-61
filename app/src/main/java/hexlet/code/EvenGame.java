@@ -1,9 +1,9 @@
 package hexlet.code;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public final class EvenGame {
-    public static int defaultRandomRangeMin = 0;
     public static int defaultRandomRangeMax = 100;
     public static int defaultTriesNumber = 3;
 
@@ -25,8 +25,9 @@ public final class EvenGame {
         System.out.println("Hello, " + player + "!");
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
+        Random generator = new Random();
         for (int i = 1; i <= defaultTriesNumber; i += 1) {
-            int number = randomNumberOfRange(defaultRandomRangeMin, defaultRandomRangeMax);
+            int number = generator.nextInt(defaultRandomRangeMax); // Random from 0 to defaultRandomRangeMax
             System.out.println("Question: " + number);
 
             String answer = reader.next();
@@ -42,9 +43,5 @@ public final class EvenGame {
         }
 
         System.out.println("Congratulations, " + player + "!");
-    }
-
-    private static int randomNumberOfRange(int min, int max) {
-        return (int) ((((max - min) + 1) * Math.random()) + min);
     }
 }
