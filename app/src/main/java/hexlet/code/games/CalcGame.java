@@ -15,7 +15,6 @@ public class CalcGame implements Game {
         operations = new char[] {'+', '-', '*'};
     }
 
-    // default randomMaxValue = 100;
     public CalcGame() {
         this(100);
     }

@@ -15,7 +15,6 @@ public class EvenGame implements Game {
         generator = new SecureRandom();
     }
 
-    // default randomMaxValue = 100;
     public EvenGame() {
         this(100);
     }
