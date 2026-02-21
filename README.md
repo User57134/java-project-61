@@ -25,5 +25,3 @@ https://asciinema.org/a/0KoadhixUbZGamXX
 
 ### CalcGame
 https://asciinema.org/a/VfS4SEmrLW7Eqzaj
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/User57134/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/User57134/java-project-61/actions)
