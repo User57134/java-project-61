@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
     public static final int DEFAULT_TRIES_NUMBER = 3;
 
     private Engine() {
