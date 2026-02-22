@@ -25,3 +25,6 @@ https://asciinema.org/a/0KoadhixUbZGamXX
 
 ### CalcGame
 https://asciinema.org/a/VfS4SEmrLW7Eqzaj
+
+### GcdGame
+https://asciinema.org/a/GpMN1lv5WWUu5KuY
