@@ -31,3 +31,6 @@ https://asciinema.org/a/GpMN1lv5WWUu5KuY
 
 ### ProgressionGame
 https://asciinema.org/a/2JBjUdxLhgVNSWFk
+
+### PrimeGame
+https://asciinema.org/a/ybcQ1NyEO6TLYBMH

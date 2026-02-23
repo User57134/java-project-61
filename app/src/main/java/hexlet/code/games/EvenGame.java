@@ -7,7 +7,6 @@ import java.security.SecureRandom;
 
 public class EvenGame implements Game {
     private SecureRandom generator = null;
-
     private int randomMaxValue = 100;  // default value is 100
 
     public EvenGame(int randomMaxValue) {
