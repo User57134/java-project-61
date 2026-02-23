@@ -42,8 +42,7 @@ public class App {
                 Cli.greating();
                 break;
             case MENU_EVEN:
-                int randomMaxValue = 200;
-                Engine.play(new EvenGame(randomMaxValue));
+                Engine.play(new EvenGame());
                 break;
             case MENU_CALC:
                 Engine.play(new CalcGame());

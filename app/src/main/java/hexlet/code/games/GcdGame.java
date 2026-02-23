@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 
 public final class GcdGame implements Game {
     private static final int DEFAULT_RADOM_MAX_VALUE = 1000;
-    private int upperLimit = 1000;
+    private int upperLimit;
     private SecureRandom generator = null;
 
     private static int gcd(int a, int b) {
