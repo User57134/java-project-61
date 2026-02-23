@@ -38,7 +38,7 @@ public final class Engine {
             } else {
                 System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was '"
                         + question.getAnswer() + "'.");
-                System.out.println("Let's try again, " + player);
+                System.out.println("Let's try again, " + player + "!");
                 return;
             }
         }
