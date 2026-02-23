@@ -5,18 +5,19 @@ import hexlet.code.Question;
 import java.security.SecureRandom;
 
 public class CalcGame implements Game {
+    private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private SecureRandom generator = null;
     private char[] operations = null;
-    private int randomMaxValue = 100;
+    private int upperLimit;
 
     public CalcGame(int randomMaxValue) {
-        this.randomMaxValue = randomMaxValue;
+        upperLimit = randomMaxValue;
         generator = new SecureRandom();
         operations = new char[] {'+', '-', '*'};
     }
 
     public CalcGame() {
-        this(100);
+        this(DEFAULT_RADOM_MAX_VALUE);
     }
 
     @Override
@@ -26,8 +27,8 @@ public class CalcGame implements Game {
 
     @Override
     public Question makeQuestion() {
-        int operand1 = generator.nextInt(randomMaxValue + 1);
-        int operand2 = generator.nextInt(randomMaxValue + 1);
+        int operand1 = generator.nextInt(upperLimit + 1);
+        int operand2 = generator.nextInt(upperLimit + 1);
         int operationIndex = generator.nextInt(operations.length);
 
         Integer result = null;

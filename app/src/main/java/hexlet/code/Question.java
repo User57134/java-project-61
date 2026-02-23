@@ -1,12 +1,12 @@
 package hexlet.code;
 
-public class Question {
+public final class Question {
     private String text = "";
     private String answer = "";
 
-    public Question(String text, String answer) {
-        this.text = text;
-        this.answer = answer;
+    public Question(String qText, String qAnswer) {
+        text = qText;
+        answer = qAnswer;
     }
 
     String getText() {

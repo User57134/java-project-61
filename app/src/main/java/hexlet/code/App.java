@@ -11,6 +11,13 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 
 public class App {
+    private static final int MENU_EXIT = 0;
+    private static final int MENU_GREET = 1;
+    private static final int MENU_EVEN = 2;
+    private static final int MENU_CALC = 3;
+    private static final int MENU_GCD = 4;
+    private static final int MENU_PROGRESSION = 5;
+    private static final int MENU_PRIME = 6;
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
@@ -31,22 +38,22 @@ public class App {
         }
 
         switch (chois) {
-            case 1:
+            case MENU_GREET:
                 Cli.greating();
                 break;
-            case 2:
+            case MENU_EVEN:
                 Engine.play(new EvenGame(200));
                 break;
-            case 3:
+            case MENU_CALC:
                 Engine.play(new CalcGame());
                 break;
-            case 4:
+            case MENU_GCD:
                 Engine.play(new GcdGame());
                 break;
-            case 5:
+            case MENU_PROGRESSION:
                 Engine.play(new ProgressionGame());
                 break;
-            case 6:
+            case MENU_PRIME:
                 Engine.play(new PrimeGame());
                 break;
             default:

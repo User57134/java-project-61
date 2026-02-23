@@ -5,7 +5,8 @@ import hexlet.code.Question;
 import java.security.SecureRandom;
 
 public class GcdGame implements Game {
-    private int randomMaxValue = 1000;
+    private static final int DEFAULT_RADOM_MAX_VALUE = 1000;
+    private int upperLimit = 1000;
     private SecureRandom generator = null;
 
     private static int gcd(int a, int b) {
@@ -29,12 +30,12 @@ public class GcdGame implements Game {
     }
 
     public GcdGame(int randomMaxValue) {
-        this.randomMaxValue = randomMaxValue;
+        upperLimit = randomMaxValue;
         generator = new SecureRandom();
     }
 
     public GcdGame() {
-        this(1000);
+        this(DEFAULT_RADOM_MAX_VALUE);
     }
 
     @Override
@@ -44,8 +45,8 @@ public class GcdGame implements Game {
 
     @Override
     public Question makeQuestion() {
-        int num1 = generator.nextInt(randomMaxValue + 1);
-        int num2 = generator.nextInt(randomMaxValue + 1);
+        int num1 = generator.nextInt(upperLimit + 1);
+        int num2 = generator.nextInt(upperLimit + 1);
         int result = gcd(num1, num2);
 
         return new Question(num1 + " " + num2, String.valueOf(result));

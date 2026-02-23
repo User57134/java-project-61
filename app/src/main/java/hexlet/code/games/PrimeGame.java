@@ -5,8 +5,9 @@ import hexlet.code.Question;
 import java.security.SecureRandom;
 
 public class PrimeGame implements Game {
+    private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private SecureRandom generator = null;
-    private int randomMaxValue = 100;
+    private int upperLimit;
 
     private static boolean isPrime(int number) {
         if (number < 2) {
@@ -32,12 +33,12 @@ public class PrimeGame implements Game {
     }
 
     public PrimeGame(int randomMaxValue) {
-        this.randomMaxValue = randomMaxValue;
+        upperLimit = randomMaxValue;
         generator = new SecureRandom();
     }
 
     public PrimeGame() {
-        this(100);
+        this(DEFAULT_RADOM_MAX_VALUE);
     }
 
     @Override
@@ -47,7 +48,7 @@ public class PrimeGame implements Game {
 
     @Override
     public Question makeQuestion() {
-        int number = generator.nextInt(randomMaxValue + 1);
+        int number = generator.nextInt(upperLimit + 1);
 
         String answer = (isPrime(number)) ? "yes" : "no";
 

@@ -5,29 +5,30 @@ import hexlet.code.Question;
 import java.security.SecureRandom;
 
 public class ProgressionGame implements Game {
+    private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private static final int PROGRESSION_MIN_LENGTH = 5;
     private static final int PROGRESSION_MAX_LENGTH = 10;
 
     private SecureRandom generator = null;
-    private int randomMaxValue = 100;
+    private int upperLimit;
 
     public ProgressionGame(int randomMaxValue) {
-        this.randomMaxValue = randomMaxValue;
+        upperLimit = randomMaxValue;
         generator = new SecureRandom();
     }
 
     public ProgressionGame() {
-        this(100);
+        this(DEFAULT_RADOM_MAX_VALUE);
     }
 
     private int[] makeProgression() {
         int progressionLength = generator.nextInt(PROGRESSION_MIN_LENGTH, PROGRESSION_MAX_LENGTH + 1);
         int[] values = new int[progressionLength];
 
-        int start = generator.nextInt(randomMaxValue + 1);
+        int start = generator.nextInt(upperLimit + 1);
         values[0] = start;
 
-        int step = generator.nextInt((randomMaxValue + 1) / 2);
+        int step = generator.nextInt((upperLimit + 1) / 2);
 
         for (var i = 1; i < progressionLength; i += 1) {
             values[i] = start + i * step;

@@ -6,16 +6,17 @@ import java.security.SecureRandom;
 
 
 public class EvenGame implements Game {
+    private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private SecureRandom generator = null;
-    private int randomMaxValue = 100;  // default value is 100
+    private int upperLimit;  // default value is 100
 
     public EvenGame(int randomMaxValue) {
-        this.randomMaxValue = randomMaxValue;
+        upperLimit = randomMaxValue;
         generator = new SecureRandom();
     }
 
     public EvenGame() {
-        this(100);
+        this(DEFAULT_RADOM_MAX_VALUE);
     }
 
     @Override
@@ -25,7 +26,7 @@ public class EvenGame implements Game {
 
     @Override
     public Question makeQuestion() {
-        int number = generator.nextInt(randomMaxValue + 1);  // Random from 0 to defaultRandomRangeMax
+        int number = generator.nextInt(upperLimit + 1);  // Random from 0 to defaultRandomRangeMax
         String answer = (number % 2 == 0) ? "yes" : "no";
 
         return new Question(String.valueOf(number), answer);
