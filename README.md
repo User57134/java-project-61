@@ -28,3 +28,6 @@ https://asciinema.org/a/VfS4SEmrLW7Eqzaj
 
 ### GcdGame
 https://asciinema.org/a/GpMN1lv5WWUu5KuY
+
+### ProgressionGame
+https://asciinema.org/a/2JBjUdxLhgVNSWFk
