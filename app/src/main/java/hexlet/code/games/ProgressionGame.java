@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Question;
 import java.security.SecureRandom;
 
-public class ProgressionGame implements Game {
+public final class ProgressionGame implements Game {
     private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private static final int PROGRESSION_MIN_LENGTH = 5;
     private static final int PROGRESSION_MAX_LENGTH = 10;

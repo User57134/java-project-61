@@ -4,7 +4,7 @@ import hexlet.code.Game;
 import hexlet.code.Question;
 import java.security.SecureRandom;
 
-public class GcdGame implements Game {
+public final class GcdGame implements Game {
     private static final int DEFAULT_RADOM_MAX_VALUE = 1000;
     private int upperLimit = 1000;
     private SecureRandom generator = null;

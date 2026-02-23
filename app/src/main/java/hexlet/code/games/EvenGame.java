@@ -5,7 +5,7 @@ import hexlet.code.Question;
 import java.security.SecureRandom;
 
 
-public class EvenGame implements Game {
+public final class EvenGame implements Game {
     private static final int DEFAULT_RADOM_MAX_VALUE = 100;
     private SecureRandom generator = null;
     private int upperLimit;  // default value is 100
