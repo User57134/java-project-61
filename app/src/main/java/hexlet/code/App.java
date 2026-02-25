@@ -7,17 +7,8 @@ import hexlet.code.games.CalcGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.ProgressionGame;
 import hexlet.code.games.PrimeGame;
-import org.apache.commons.lang3.math.NumberUtils;
-
 
 public class App {
-    private static final int MENU_EXIT = 0;
-    private static final int MENU_GREET = 1;
-    private static final int MENU_EVEN = 2;
-    private static final int MENU_CALC = 3;
-    private static final int MENU_GCD = 4;
-    private static final int MENU_PROGRESSION = 5;
-    private static final int MENU_PRIME = 6;
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
@@ -32,31 +23,39 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your chois: ");
 
-        int chois = 0;
+        String chois = "0";
         if (reader.hasNext()) {
-            chois = NumberUtils.toInt(reader.next(), 0);
+            chois = reader.next();
         }
 
         switch (chois) {
-            case MENU_GREET:
-                Cli.greating();
+            case "0":
                 break;
-            case MENU_EVEN:
-                Engine.play(new EvenGame());
+            case "1":
                 break;
-            case MENU_CALC:
-                Engine.play(new CalcGame());
+            case "2":
+                var evenGame = new EvenGame();
+                evenGame.start();
                 break;
-            case MENU_GCD:
-                Engine.play(new GcdGame());
+            case "3":
+                var calcGame = new CalcGame();
+                calcGame.start();
                 break;
-            case MENU_PROGRESSION:
-                Engine.play(new ProgressionGame());
+            case "4":
+                var gcdGame = new GcdGame();
+                gcdGame.start();
                 break;
-            case MENU_PRIME:
-                Engine.play(new PrimeGame());
+            case "5":
+                var progressionGame = new ProgressionGame();
+                progressionGame.start();
                 break;
+            case "6":
+                var primeGame = new PrimeGame();
+                primeGame.start();
+                break;
+
             default:
+                System.out.println("Invalid number entered: " + chois);
                 break;
         }
 

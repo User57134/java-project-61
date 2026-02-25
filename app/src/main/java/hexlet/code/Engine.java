@@ -9,7 +9,7 @@ public final class Engine {
 
     }
 
-    public static void play(Game game) {
+    public static void play(String task, String[][] questions) {
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
@@ -21,23 +21,19 @@ public final class Engine {
         }
 
         System.out.println("Hello, " + player + "!");
-        System.out.println(game.getTask());
+        System.out.println(task);
 
-        for (int i = 1; i <= DEFAULT_TRIES_NUMBER; i += 1) {
-            var question = game.makeQuestion();
-            if (question == null) {
-                System.out.println("The game finished. Engine's logic error. Try later.");
-                return;
-            }
-            System.out.println("Question: " + question.getText());
+        for (var i = 0; i < questions.length; i += 1) {
 
-            String playerAnswer = reader.next();
+            System.out.println("Question: " + questions[i][0]);
 
-            if (question.check(playerAnswer)) {
+            String answer = reader.next();
+
+            if (questions[i][1].equals(answer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was '"
-                        + question.getAnswer() + "'.");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
+                        + questions[i][1] + "'.");
                 System.out.println("Let's try again, " + player + "!");
                 return;
             }
