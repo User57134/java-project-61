@@ -32,6 +32,7 @@ public class App {
             case "0":
                 break;
             case "1":
+                Cli.greating();
                 break;
             case "2":
                 var evenGame = new EvenGame();
