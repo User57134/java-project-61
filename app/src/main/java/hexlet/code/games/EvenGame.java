@@ -19,7 +19,7 @@ public final class EvenGame {
     }
 
     private String[][] makeQuestions() {
-        String[][] questions = new String[3][2];
+        String[][] questions = new String[tries][2];
 
         int number = 0;
         for (var i = 0; i < questions.length; i += 1) {

@@ -32,7 +32,7 @@ public final class PrimeGame {
         }
 
         int limit = (int) Math.sqrt(number) + 1;
-        int secondOddNumber = 3;
+        final int secondOddNumber = 3;
         for (int divisor = secondOddNumber; divisor < limit; divisor += 2) {
             if (number % divisor == 0) {
                 return false;
