@@ -11,7 +11,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=User57134_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=User57134_java-project-61)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=User57134_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=User57134_java-project-61)
 
-The project will make you use your brain to tackle with it. It consits of 5 games. A CLI is used to interact with a player. Choose game and follow instructions.
+The project will make you use your brain to tackle with it. It consits of 5 games. A CLI is used to interact with a player. Choose a game and follow instructions.
 
 ## Setup
 
@@ -22,14 +22,18 @@ make build
 ## Run
 
 ```bash
-make run
+make run-dist
 ```
 
 ## Game samples:
 
-[_### EvenGame_](https://asciinema.org/a/0KoadhixUbZGamXX)
-[_### CalcGame_](https://asciinema.org/a/VfS4SEmrLW7Eqzaj)
-[_### GcdGame_](https://asciinema.org/a/GpMN1lv5WWUu5KuY)
-[_### ProgressionGame_](https://asciinema.org/a/2JBjUdxLhgVNSWFk)
-[_### PrimeGame_](https://asciinema.org/a/ybcQ1NyEO6TLYBMH)
+[_EvenGame_](https://asciinema.org/a/0KoadhixUbZGamXX) 
+
+[_CalcGame_](https://asciinema.org/a/VfS4SEmrLW7Eqzaj)
+
+[_GcdGame_](https://asciinema.org/a/GpMN1lv5WWUu5KuY)
+
+[_ProgressionGame_](https://asciinema.org/a/2JBjUdxLhgVNSWFk)
+
+[_PrimeGame_](https://asciinema.org/a/ybcQ1NyEO6TLYBMH)
 
