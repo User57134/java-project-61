@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public final class Engine {
-    public static final int DEFAULT_TRIES_NUMBER = 3;
+    public static final int ROUNDS = 3;
 
     private Engine() {
 

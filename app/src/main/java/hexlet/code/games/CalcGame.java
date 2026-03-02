@@ -7,14 +7,11 @@ import hexlet.code.Engine;
 
 public final class CalcGame {
     private static final int DEFAULT_RADOM_MAX_VALUE = 100;
-    public static final int MAX_TRIES_NUMBER = 3;
     private SecureRandom generator = null;
     private char[] operations = null;
     private int upperLimit;  // default value is 100
-    private int tries;
 
     public CalcGame() {
-        tries = MAX_TRIES_NUMBER;
         upperLimit = DEFAULT_RADOM_MAX_VALUE;
         generator = new SecureRandom();
         operations = new char[] {'+', '-', '*'};
@@ -34,7 +31,7 @@ public final class CalcGame {
     }
 
     private String[][] makeQuestions() {
-        String[][] questions = new String[tries][2];
+        String[][] questions = new String[Engine.ROUNDS][2];
 
         int operand1 = 0;
         int operand2 = 0;
@@ -64,7 +61,7 @@ public final class CalcGame {
         var questions = makeQuestions();
 
         if ((questions == null) || (questions.length == 0)
-                || (questions.length > MAX_TRIES_NUMBER)) {
+                || (questions.length > Engine.ROUNDS)) {
             System.out.println("The game was terminated due to a logical error.");
             return;
         }
