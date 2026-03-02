@@ -23,17 +23,17 @@ public final class Engine {
         System.out.println("Hello, " + player + "!");
         System.out.println(task);
 
-        for (var i = 0; i < questions.length; i += 1) {
+        for (var row : questions) {
 
-            System.out.println("Question: " + questions[i][0]);
+            System.out.println("Question: " + row[0]);
 
             String answer = reader.next();
 
-            if (questions[i][1].equals(answer)) {
+            if (row[1].equals(answer)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
-                        + questions[i][1] + "'.");
+                        + row[1] + "'.");
                 System.out.println("Let's try again, " + player + "!");
                 return;
             }
